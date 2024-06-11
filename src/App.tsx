@@ -2,13 +2,17 @@ import "./index.css";
 import Logo from "./components/Logo";
 import ButtonLight from "./components/ButtonLight";
 import ButtonDark from "./components/ButtonDark";
-import SideBar from "./components/SideBar";
+// import SideBar from "./components/SideBar";
+import TopBar from "./components/TopBar";
+import SocialsTopBar from "./components/SocialsTopBar";
 
 function App() {
   return (
     <div className="flex bg-lightgrey17b">
-      <SideBar />
-      <div className="flex ml-10   items-center justify-evenly">
+      {/* <SideBar /> */}
+      <SocialsTopBar />
+      <TopBar />
+      <div className="flex mt-16  items-center justify-evenly">
         <Logo width="20%" />
         <div className="">
           <ButtonLight />

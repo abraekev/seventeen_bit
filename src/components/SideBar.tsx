@@ -3,9 +3,15 @@ import { FaFire, FaPoo } from "react-icons/fa";
 
 interface SideBarIconProps {
   icon: React.ReactElement;
+  text?: string;
 }
-function SideBarIcon({ icon }: SideBarIconProps) {
-  return <div className="sidebar-icon">{icon}</div>;
+function SideBarIcon({ icon, text = "tooltip" }: SideBarIconProps) {
+  return (
+    <div className="sidebar-icon group">
+      {icon}
+      <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
+    </div>
+  );
 }
 
 function SideBar() {

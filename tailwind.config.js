@@ -9,6 +9,7 @@ export default {
   theme: {
     extend:{
       colors:{
+        blue17b:'#0B2540',
         yellow17b: '#FFC90E',
         orange17b: '#F77329',
         purple17b:'#5B033F',
