@@ -30,6 +30,9 @@ function TopBar() {
         className=" flex mx-auto items-center justify-start
         w-1/2 "
       >
+        <a href="/" className="topbar-icon mx-4">
+          <img src="./17bitLogoSmall.png" alt="17bit logo" />
+        </a>
         <TopBarBadge icon={<FaFire size="28" />} />
         <TopBarBadge icon={<BsPlus size="32" />} />
         <TopBarBadge icon={<BsFillLightningFill size="20" />} />
