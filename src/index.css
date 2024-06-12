@@ -15,10 +15,22 @@
                 text-xs font-bold
                 transition-all duration-100 scale-0 origin-left;
     }
+    .topbar-icon-small{
+        @apply  relative flex items-center justify-center h-6 w-6 mx-auto my-2 shadow-lg
+                 bg-lightgrey17b text-white17b hover:bg-orange17b rounded-full hover:rounded-xl
+                  cursor-pointer;
+                
+    }    
+    .topbar-text{
+        @apply  relative flex items-center justify-center h-12 w-auto mx-auto my-2 shadow-lg
+                 bg-lightgrey17b text-white17b hover:bg-orange17b rounded-full hover:rounded-xl
+                  cursor-pointer px-4;
+    }
     .topbar-icon{
         @apply  relative flex items-center justify-center h-12 w-12 mx-auto my-2 shadow-lg
                  bg-lightgrey17b text-white17b hover:bg-orange17b rounded-full hover:rounded-xl
-                 transition-all duration-100 ease-linear cursor-pointer;
+                 /* transition-all duration-100 ease-linear */
+                  cursor-pointer;
                 
     }
     .topbar-tooltip{
