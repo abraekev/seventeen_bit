@@ -8,7 +8,7 @@ function YoutubeEmbedded() {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       allowFullScreen
-      className="px-4 py-4 rounded-xl  bg-black shadow-md border-0" // Example Tailwind CSS classes
+      className="flex px-4 py-4 rounded-xl  bg-black shadow-md border-0"
     ></iframe>
   );
 }

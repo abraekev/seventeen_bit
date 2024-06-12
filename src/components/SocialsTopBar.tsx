@@ -13,7 +13,7 @@ function TopBarIcon({
   link = "#",
 }: TopBarIconProps) {
   return (
-    <a href={link} className="topbar-icon-small group">
+    <a href={link} className="topbar-icon-small group px-0 mx-2">
       {icon ? icon : text}
       {/* header
       <span className="topbar-tooltip group-hover:scale-100">{tooltip}</span> */}
@@ -23,9 +23,9 @@ function TopBarIcon({
 
 function SocialsTopBar() {
   return (
-    <div className="fixed  top-0 left-0 h-8 w-screen m-0 bg-blue17b text-white17b shadow-lg flex items-center justify-end pr-4 ">
-      <div className="flex items-center space-x-2">
-        <span>Check out our Discord! →</span>
+    <div className="fixed top-0 left-0 h-8 w-full bg-blue17b text-white17b shadow-lg flex items-center justify-center">
+      <div className="flex items-center justify-end w-1/2 px-2">
+        <span className="mr-4">Check out Discord! →</span>
         <TopBarIcon
           icon={<FaDiscord size="16" />}
           link="https://discord.gg/q374vA6Ek4"

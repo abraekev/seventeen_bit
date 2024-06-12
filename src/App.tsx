@@ -6,7 +6,7 @@ import Content from "./components/Content";
 
 function App() {
   return (
-    <div className="flex bg-lightgrey17b">
+    <div className="bg-blue17b h-auto w-full">
       <SocialsTopBar />
       <TopBar />
       <Content />
