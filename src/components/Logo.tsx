@@ -1,14 +1,14 @@
 interface LogoProps {
-  width?: string;
+  size?: number;
 }
-function Logo({ width = "2" }: LogoProps) {
-  const widthClass =
-    { sm: "w-16", md: "w-24", lg: "w-32", xl: "w-48", "2-xl": "w-64" }[width] ||
-    "w-32";
+function Logo({ size = 2 }: LogoProps) {
+  const sizeClass: string =
+    { 1: "w-1/5", 2: "w-2/5", 3: "w-3/5", 4: "w-4/5", 5: "w-full" }[size] ||
+    "w-2/5";
   return (
     <img
       src="./17bitLogoTransparent.png"
-      className={widthClass}
+      className={`h-fit ${sizeClass}`}
       alt="17bit logo"
     />
   );

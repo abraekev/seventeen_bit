@@ -23,7 +23,7 @@ function TopBarIcon({
 
 function SocialsTopBar() {
   return (
-    <div className="fixed  top-0 left-0 h-8 w-screen m-0 bg-blue17b text-white17b shadow-lg flex items-center justify-end pr-4">
+    <div className="fixed  top-0 left-0 h-8 w-screen m-0 bg-blue17b text-white17b shadow-lg flex items-center justify-end pr-4 ">
       <div className="flex items-center space-x-2">
         <span>Check out our Discord! →</span>
         <TopBarIcon
