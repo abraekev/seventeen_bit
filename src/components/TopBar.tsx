@@ -70,7 +70,7 @@ function TopBar(props: TopBarProps) {
             <GoGraph size="24" />
           </a>
         </TopBarIcon>
-        <TopBarText text="About" tooltip="NYI" />
+        <TopBarText text="About" tooltip="NYI5" />
       </div>
     </div>
   );

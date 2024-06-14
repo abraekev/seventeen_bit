@@ -17,8 +17,8 @@ export default {
         darkgrey17b: '#31314A',
         lightgrey17b: '#696176',
         white17b:'#FFF8DB'
-      }
-    },
+      }},
+    
     accentColor: ({ theme }) => ({
       ...theme('colors'),
       auto: 'auto',
