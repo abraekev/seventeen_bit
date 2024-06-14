@@ -2,34 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 @layer components{
-    .sidebar-icon{
-        @apply  relative flex items-center justify-center h-12 w-12 mx-auto my-2 shadow-lg
-                 bg-lightgrey17b text-white17b hover:bg-orange17b rounded-full hover:rounded-xl
-                 transition-all duration-100 ease-linear cursor-pointer;
+
+/*** General ***/
+/*******************************************************************************************************************/
+    .responsive-w{
+        @apply  w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12
+    }
+
+/*** Content ***/
+/*******************************************************************************************************************/
+    .content{
+        @apply responsive-w
+            min-h-screen bg-lightgrey17b
+            pt-40 md:pt-40
                 
     }
-    .sidebar-tooltip{
-        @apply absolute w-auto p-2 m-2 min-w-max left-14
-                rounded-md shadow-md
-                text-white17b bg-darkgrey17b
-                text-xs font-bold
-                transition-all duration-100 scale-0 origin-left;
+
+/*** SocialsTopBar ***/
+/*******************************************************************************************************************/
+   .socialstopbar{   
+        @apply  flex fixed top-0 left-0 w-full
+                h-20 md:h-20
+                shadow-xl bg-blue17b text-white17b 
+                items-center justify-center
     }
-    .topbar-icon-small{
-        @apply  relative flex items-center justify-center h-6 w-6 mx-auto my-2 shadow-lg
-                 bg-orange17b text-white17b hover:bg-yellow17b hover:text-darkgrey17b rounded-full hover:rounded-xl
-                  cursor-pointer;
+    .socialstopbar-icon{
+        @apply  relative flex items-center justify-center px-2
+                h-12 w-12 
+                shadow-lg
+                bg-orange17b text-white17b hover:bg-yellow17b hover:text-darkgrey17b 
+                rounded-full hover:rounded-xl
+                cursor-pointer;
                 
     }    
     .topbar-text{
-        @apply  relative flex items-center justify-center h-12 w-auto mx-auto my-2 shadow-lg
+        @apply  relative flex items-center justify-center h-12 w-auto shadow-lg
                  bg-lightgrey17b text-white17b hover:bg-orange17b rounded-full hover:rounded-xl
                   cursor-pointer px-4;
     }
+
+/*** TopBar ***/
+/*******************************************************************************************************************/
+    .topbar{
+        @apply  fixed flex left-0 w-full
+                top-20 h-20 md:top-20 md:h-20
+                bg-darkgrey17b shadow-lg items-center justify-center
+    }
     .topbar-icon{
-        @apply  relative flex items-center justify-center h-12 w-12 mx-auto my-2 shadow-lg
+        @apply  relative flex items-center justify-center shadow-lg p-1
+                h-12 w-12 
                  bg-lightgrey17b text-white17b hover:bg-orange17b rounded-full hover:rounded-xl
-                 /* transition-all duration-100 ease-linear */
                   cursor-pointer;
                 
     }
@@ -40,4 +62,11 @@
                 text-xs font-bold
                 transition-all duration-100 scale-0 origin-left;
     }
+
 }
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }

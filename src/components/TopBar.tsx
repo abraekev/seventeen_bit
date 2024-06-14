@@ -1,45 +1,72 @@
-import { BsFillLightningFill, BsPlus } from "react-icons/bs";
-import { FaFire, FaPoo } from "react-icons/fa";
+import { BsFillLightningFill } from "react-icons/bs";
+import { FaPoo } from "react-icons/fa";
+import ButtonFold from "./ButtonFold";
 
-interface TopBarBadgeProps {
-  icon?: React.ReactElement;
-  text?: string;
+//#region SubComponents
+interface TopBarIconProps {
+  children: React.ReactNode;
   tooltip?: string;
 }
-function TopBarBadge({
-  icon,
-  text = "defaultText",
-  tooltip = "tooltip",
-}: TopBarBadgeProps) {
+function TopBarIcon({ children, tooltip = "tooltip" }: TopBarIconProps) {
   return (
-    <div className={`${icon ? "topbar-icon" : "topbar-text"} group mx-4`}>
-      {icon ? icon : text}
+    <div className="topbar-icon group">
+      {children}
       <span className="topbar-tooltip group-hover:scale-100">{tooltip}</span>
     </div>
   );
 }
 
-function TopBar() {
+interface TopBarTextProps {
+  text: string;
+  tooltip: string;
+}
+function TopBarText({
+  text = "defaultText",
+  tooltip = "tooltip",
+}: TopBarTextProps) {
   return (
-    <div
-      className="fixed 
-      top-8 left-0 h-16 w-full
-      bg-darkgrey17b shadow-lg items-center justify-center"
-    >
+    <div className="topbar-text ml-auto group">
+      {text}
+      <span className="topbar-tooltip group-hover:scale-100">{tooltip}</span>
+    </div>
+  );
+}
+//#endregion
+
+interface TopBarProps {
+  onSideMenuClick: () => void;
+}
+function TopBar(props: TopBarProps) {
+  return (
+    <div className="topbar">
+      {/* mobile bar */}
       <div
-        className=" flex mx-auto items-center justify-start
-        w-1/2 "
+        className="flex md:hidden
+          responsive-w h-full justify-start items-center
+          gap-2 "
       >
-        <a href="/" className="topbar-icon mx-4">
-          <img src="./17bitLogoSmall.png" alt="17bit logo" />
-        </a>
-        <TopBarBadge icon={<FaFire size="28" />} />
-        <TopBarBadge icon={<BsPlus size="32" />} />
-        <TopBarBadge icon={<BsFillLightningFill size="20" />} />
-        <TopBarBadge icon={<FaPoo size="20" />} />
-        <div className="flex items-center ml-auto">
-          <TopBarBadge text="About" tooltip="What we do in the shadows." />
-        </div>
+        <ButtonFold left={false} onSideMenuClick={props.onSideMenuClick} />
+        <TopBarText text="About" tooltip="Nothing to see here." />
+      </div>
+      {/* browser bar */}
+      <div
+        className="hidden md:flex
+          responsive-w
+          h-full justify-start items-center
+          px-2 gap-2 "
+      >
+        <TopBarIcon tooltip="Roster">
+          <a href="https://worldofwarcraft.blizzard.com/en-gb/guild/eu/ragnaros/seventeen-bit">
+            <img src="./discordLogo.webp" className="w-20 rounded-full" />
+          </a>
+        </TopBarIcon>
+        <TopBarIcon>
+          <BsFillLightningFill size="30" />
+        </TopBarIcon>
+        <TopBarIcon>
+          <FaPoo size="30" />
+        </TopBarIcon>
+        <TopBarText text="About" tooltip="What we do in the shadows." />
       </div>
     </div>
   );
