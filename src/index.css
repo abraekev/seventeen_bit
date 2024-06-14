@@ -14,14 +14,14 @@
     .content{
         @apply responsive-w
             min-h-screen bg-lightgrey17b
-            pt-40 md:pt-40
+            pt-0 md:pt-0
                 
     }
 
 /*** SocialsTopBar ***/
 /*******************************************************************************************************************/
    .socialstopbar{   
-        @apply  flex fixed top-0 left-0 w-full
+        @apply  flex top-0 left-0 w-full
                 h-20 md:h-20
                 shadow-xl bg-blue17b text-white17b 
                 items-center justify-center
@@ -44,7 +44,7 @@
 /*** TopBar ***/
 /*******************************************************************************************************************/
     .topbar{
-        @apply  fixed flex left-0 w-full
+        @apply  flex left-0 w-full
                 top-20 h-20 md:top-20 md:h-20
                 bg-darkgrey17b shadow-lg items-center justify-center
     }

@@ -1,5 +1,5 @@
-import { BsFillLightningFill } from "react-icons/bs";
-import { FaPoo } from "react-icons/fa";
+import { HiMiniUserGroup } from "react-icons/hi2";
+import { GoGraph } from "react-icons/go";
 import ButtonFold from "./ButtonFold";
 
 //#region SubComponents
@@ -55,18 +55,22 @@ function TopBar(props: TopBarProps) {
           h-full justify-start items-center
           px-2 gap-2 "
       >
-        <TopBarIcon tooltip="Roster">
-          <a href="https://worldofwarcraft.blizzard.com/en-gb/guild/eu/ragnaros/seventeen-bit">
+        <TopBarIcon tooltip="Home">
+          <a href="./">
             <img src="./discordLogo.webp" className="w-20 rounded-full" />
           </a>
         </TopBarIcon>
-        <TopBarIcon>
-          <BsFillLightningFill size="30" />
+        <TopBarIcon tooltip="Armory">
+          <a href="https://worldofwarcraft.blizzard.com/en-gb/guild/eu/ragnaros/seventeen-bit">
+            <HiMiniUserGroup size="30" />
+          </a>
         </TopBarIcon>
-        <TopBarIcon>
-          <FaPoo size="30" />
+        <TopBarIcon tooltip="Warcraft Logs">
+          <a href="https://www.warcraftlogs.com/guild/rankings/376322/latest#difficulty=4">
+            <GoGraph size="24" />
+          </a>
         </TopBarIcon>
-        <TopBarText text="About" tooltip="What we do in the shadows." />
+        <TopBarText text="About" tooltip="NYI" />
       </div>
     </div>
   );
